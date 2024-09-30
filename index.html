@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malou Keyboard World</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+    <header>
+        <h1>Malou Keyboard World</h1>
+        <nav>
+            <button onclick="showSection('home')">Home</button>
+            <button onclick="showSection('products')">Products</button>
+            <button onclick="showSection('about')">About Us</button>
+            <button onclick="showSection('contact')">Contact Us</button>
+        </nav>
+    </header>
+
+    <div id="home" class="section">
+        <h2>Welcome to Malou Keyboard World!</h2>
+        <p>Discover the best mechanical keyboards for your typing needs.</p>
+    </div>
+
+    <div id="products" class="section" style="display: none;">
+        <h2>Products</h2>
+        <input type="text" id="search-bar" placeholder="Search for keyboards..." onkeyup="searchProducts()" style="display:none;">
+        <div class="product-container">
+            <div class="product-item">
+                <img src="https://media.cnn.com/api/v1/images/stellar/prod/keychron-q1-pro-qmk-via-wireless-custom-mechanical-keyboard-75-layout-full-aluminum-black-frame-for-mac-w-indows-linux-with-rgb-backlight-and-hot-swappable-k-pro-switch-banana-1800x1800.jpg?c=16x9&q=h_720,w_1280,c_fill" alt="Mechanical Keyboard">
+                <h3>Mechanical Keyboard</h3>
+                <p>Price: RM 100</p>
+                <p>Description: A premium mechanical keyboard designed for a superior typing experience.</p>
+                <button onclick="openPurchaseForm('Mechanical Keyboard')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://m.media-amazon.com/images/I/81SEXa0-jgL._AC_SL1500_.jpg" alt="Wireless Keyboard">
+                <h3>Wireless Keyboard</h3>
+                <p>Price: RM 110</p>
+                <p>Description: A sleek wireless keyboard offering flexibility and convenience for users.</p>
+                <button onclick="openPurchaseForm('Wireless Keyboard')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://m.media-amazon.com/images/I/71suJxdFFEL._AC_SL1500_.jpg" alt="RGB Gaming Keyboard">
+                <h3>RGB Gaming Keyboard</h3>
+                <p>Price: RM 120</p>
+                <p>Description: A gaming keyboard featuring dynamic RGB lighting for an immersive experience.</p>
+                <button onclick="openPurchaseForm('RGB Gaming Keyboard')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://s3-eu-west-1.amazonaws.com/backcslimages/newsite/product-images/1000-1000/BC-Split-Ergonomic-Keyboard.jpg" alt="Ergonomic Keyboard">
+                <h3>Ergonomic Keyboard</h3>
+                <p>Price: RM 130</p>
+                <p>Description: Designed for comfort, this ergonomic keyboard helps reduce strain during long typing sessions.</p>
+                <button onclick="openPurchaseForm('Ergonomic Keyboard')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://i0.wp.com/hspreview.com/wp-content/uploads/2019/01/12345-e1689899035263.jpg" alt="Silent Keyboard">
+                <h3>Silent Keyboard</h3>
+                <p>Price: RM 140</p>
+                <p>Description: A quiet keyboard ideal for shared spaces, featuring soft-touch keys.</p>
+                <button onclick="openPurchaseForm('Silent Keyboard')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://m.media-amazon.com/images/I/61LSD7YprnL._AC_SL1500_.jpg" alt="Mizuno Ergo F660">
+                <h3>Mizuno Ergo F660</h3>
+                <p>Price: RM 100</p>
+                <p>Description: A keyboard designed for ergonomic support with silent keys.</p>
+                <button onclick="openPurchaseForm('Mizuno Ergo F660')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://m.media-amazon.com/images/I/712e7S94B+L._AC_SL1500_.jpg" alt="Razer Huntsman Mini">
+                <h3>Razer Huntsman Mini</h3>
+                <p>Price: RM 100</p>
+                <p>Description: A compact keyboard with Razer's innovative opto-mechanical switches.</p>
+                <button onclick="openPurchaseForm('Razer Huntsman Mini')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://static.wixstatic.com/media/131a7a_c1ea37e621dd4ea1b310c6114b6fdf7c~mv2.png/v1/fill/w_998,h_470,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/131a7a_c1ea37e621dd4ea1b310c6114b6fdf7c~mv2.png" alt="HyperX Alloy Elite 2">
+                <h3>HyperX Alloy Elite 2</h3>
+                <p>Price: RM 110</p>
+                <p>Description: A durable gaming keyboard with customizable features and a sturdy frame.</p>
+                <button onclick="openPurchaseForm('HyperX Alloy Elite 2')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://razer01-01-us-east-1-prod-media.s3.amazonaws.com/sys-master/root/hf1/haa/9619036995614/razer-ornata-v2-gallery-1500x1000-7.jpg" alt="Razer Ornata V2">
+                <h3>Razer Ornata V2</h3>
+                <p>Price: RM 120</p>
+                <p>Description: A hybrid keyboard combining mechanical and membrane features for comfort.</p>
+                <button onclick="openPurchaseForm('Razer Ornata V2')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://m.media-amazon.com/images/I/51h3zbh3YCS._AC_UF894,1000_QL80_.jpg" alt="Logitech G915 TKL">
+                <h3>Logitech G915 TKL</h3>
+                <p>Price: RM 130</p>
+                <p>Description: A low-profile mechanical keyboard with advanced wireless technology.</p>
+                <button onclick="openPurchaseForm('Logitech G915 TKL')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://computerarenakh.com/image/cache/catalog/1.DARA/1.SDJFAJSLDJFSDF/AKKO3068-600x600-468x278.jpg" alt="Akko 3068 World Tour">
+                <h3>Akko 3068 World Tour</h3>
+                <p>Price: RM 110</p>
+                <p>Description: A compact keyboard with vibrant designs and high durability for everyday use.</p>
+                <button onclick="openPurchaseForm('Akko 3068 World Tour')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://m.media-amazon.com/images/I/61VC6EoVrKS.jpg" alt="Keychron K6">
+                <h3>Keychron K6</h3>
+                <p>Price: RM 120</p>
+                <p>Description: A versatile wireless mechanical keyboard with a compact layout.</p>
+                <button onclick="openPurchaseForm('Keychron K6')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://epomaker.au/cdn/shop/files/2021-04-06T165633.769.jpg?v=1712656390" alt="Epomaker Akko 3068">
+                <h3>Epomaker Akko 3068</h3>
+                <p>Price: RM 110</p>
+                <p>Description: A responsive gaming keyboard known for its excellent key feel.</p>
+                <button onclick="openPurchaseForm('Epomaker Akko 3068')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://mecha.com.my/cdn/shop/files/Keychron-Q1-Max-QMK-VIA-Wireless-Custom-Mechanical-Keyboard-75_-Layout-Aluminum-Black-Fully-Assembled-Knob-for-Mac-Windows-Linux-Gateron-Jupiter-Red_400x@2x.webp?v=1705925709" alt="Keychron Q1">
+                <h3>Keychron Q1</h3>
+                <p>Price: RM 130</p>
+                <p>Description: A customizable mechanical keyboard with a solid build and RGB lighting.</p>
+                <button onclick="openPurchaseForm('Keychron Q1')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://resource.logitech.com/content/dam/gaming/en/products/pro-x-keyboard/pro-x-keyboard-gallery-1.png" alt="Logitech G Pro X">
+                <h3>Logitech G Pro X</h3>
+                <p>Price: RM 110</p>
+                <p>Description: A professional-grade mechanical keyboard with customizable switches.</p>
+                <button onclick="openPurchaseForm('Logitech G Pro X')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://mrit.my/wp-content/uploads/2021/10/razer-blackwidow-v3-tkl-1-240x240.jpg" alt="Razer BlackWidow V3">
+                <h3>Razer BlackWidow V3</h3>
+                <p>Price: RM 120</p>
+                <p>Description: An all-round gaming keyboard with mechanical switches and RGB lighting.</p>
+                <button onclick="openPurchaseForm('Razer BlackWidow V3')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://m.media-amazon.com/images/I/818T--WBwvL._AC_SL1500_.jpg" alt="Kinesis Advantage2">
+                <h3>Kinesis Advantage2</h3>
+                <p>Price: RM 130</p>
+                <p>Description: An ergonomic keyboard designed for efficiency and comfort.</p>
+                <button onclick="openPurchaseForm('Kinesis Advantage2')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://cdn1.sgliteasset.com/BANANALOVEWATERMELON/images/product/product-3612195/RkAH4vzS653b80aee9bbf_1698398382.jpg" alt="Corsair K70 RGB">
+                <h3>Corsair K70 RGB</h3>
+                <p>Price: RM 140</p>
+                <p>Description: A feature-rich keyboard with customizable RGB lighting and macro keys.</p>
+                <button onclick="openPurchaseForm('Corsair K70 RGB')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://www.gameshop.my/cdn/shop/products/g815_large.jpg?v=1591178730" alt="Logitech G815">
+                <h3>Logitech G815</h3>
+                <p>Price: RM 120</p>
+                <p>Description: A stylish mechanical keyboard with low-profile keys and customizable lighting.</p>
+                <button onclick="openPurchaseForm('Logitech G815')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://hnsgsfp.imgix.net/9/images/detailed/44/SteelSeries_Apex_Pro_Mechanical_Gaming_Keyboard_-_Main.jpg?fit=fill&bg=0FFF&w=1536&h=900&auto=format,compress" alt="SteelSeries Apex Pro">
+                <h3>SteelSeries Apex Pro</h3>
+                <p>Price: RM 100</p>
+                <p>Description: A premium keyboard with adjustable actuation switches for personalized feedback.</p>
+                <button onclick="openPurchaseForm('SteelSeries Apex Pro')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://heavyarm-asia.com/wp-content/uploads/2018/10/hyper-fps-pro-3.jpg" alt="HyperX Alloy FPS Pro">
+                <h3>HyperX Alloy FPS Pro</h3>
+                <p>Price: RM 130</p>
+                <p>Description: A compact keyboard designed for FPS gamers, featuring durable construction.</p>
+                <button onclick="openPurchaseForm('HyperX Alloy FPS Pro')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://www.tmt.my/data/editor/sc-product/2889/RazerOrnataV3.jpg" alt="Razer Ornata">
+                <h3>Razer Ornata</h3>
+                <p>Price: RM 110</p>
+                <p>Description: A gaming keyboard with a unique hybrid mechanical design for comfortable typing.</p>
+                <button onclick="openPurchaseForm('Razer Ornata')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://i.ebayimg.com/images/g/Dz0AAOSwo~BgwYp4/s-l400.jpg" alt="Corsair K95 RGB">
+                <h3>Corsair K95 RGB</h3>
+                <p>Price: RM 140</p>
+                <p>Description: A high-end gaming keyboard with customizable keys and advanced lighting options.</p>
+                <button onclick="openPurchaseForm('Corsair K95 RGB')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://i.ebayimg.com/images/g/oVgAAOSwox9kfoWI/s-l1200.jpg" alt="Akko 3068">
+                <h3>Akko 3068</h3>
+                <p>Price: RM 110</p>
+                <p>Description: A durable keyboard perfect for gaming, featuring a compact layout.</p>
+                <button onclick="openPurchaseForm('Akko 3068')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrGXlyIIG1dqypAqAtNaHGJ-6YgylNDlOJ9g&s" alt="Keychron K6">
+                <h3>Keychron K6</h3>
+                <p>Price: RM 120</p>
+                <p>Description: A popular compact keyboard with wireless functionality and RGB options.</p>
+                <button onclick="openPurchaseForm('Keychron K6')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://m.media-amazon.com/images/I/61lBaa06EfL._AC_UF894,1000_QL80_.jpg" alt="Epomaker Akko 3068">
+                <h3>Epomaker Akko 3068</h3>
+                <p>Price: RM 110</p>
+                <p>Description: An excellent choice for gamers with responsive key switches.</p>
+                <button onclick="openPurchaseForm('Epomaker Akko 3068')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://www.duckychannel.com.tw/upload/2019_06_042/20190604135123a01iafRsu6.jpg" alt="Ducky One 2 Mini">
+                <h3>Ducky One 2 Mini</h3>
+                <p>Price: RM 130</p>
+                <p>Description: A portable keyboard with customizable features and vibrant RGB lighting.</p>
+                <button onclick="openPurchaseForm('Ducky One 2 Mini')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://down-my.img.susercontent.com/file/66f1b81a36d0fac6cb8a2a2ddf71fe67" alt="Anne Pro 2">
+                <h3>Anne Pro 2</h3>
+                <p>Price: RM 140</p>
+                <p>Description: A compact mechanical keyboard with customizable RGB lighting.</p>
+                <button onclick="openPurchaseForm('Anne Pro 2')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://m.media-amazon.com/images/I/61B2caLNKCL.jpg" alt="Varmilo VA87M">
+                <h3>Varmilo VA87M</h3>
+                <p>Price: RM 130</p>
+                <p>Description: A high-quality keyboard featuring customizable keycaps and solid build quality.</p>
+                <button onclick="openPurchaseForm('Varmilo VA87M')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://d2kz9lt0wzv9b2.cloudfront.net/web/image/product.template/249178/image_1024?ts=1714703690" alt="Leopold FC750R">
+                <h3>Leopold FC750R</h3>
+                <p>Price: RM 130</p>
+                <p>Description: Known for its exceptional typing experience and build quality.</p>
+                <button onclick="openPurchaseForm('Leopold FC750R')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://files.coolermaster.com/og-image/ck530-v2-1200x630.jpg" alt="Cooler Master CK530">
+                <h3>Cooler Master CK530</h3>
+                <p>Price: RM 120</p>
+                <p>Description: An affordable mechanical keyboard with essential RGB features.</p>
+                <button onclick="openPurchaseForm('Cooler Master CK530')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe_dC1j6HixuPstCSX4gpJ8VQYHpyMwh7jqA&s" alt="Razer Huntsman Mini">
+                <h3>Razer Huntsman Mini</h3>
+                <p>Price: RM 130</p>
+                <p>Description: A compact and fast keyboard designed for gaming enthusiasts.</p>
+                <button onclick="openPurchaseForm('Razer Huntsman Mini')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://mrit.my/wp-content/uploads/2021/10/razer-cynosa-v2-1.jpg" alt="Razer Cynosa V2">
+                <h3>Razer Cynosa V2</h3>
+                <p>Price: RM 110</p>
+                <p>Description: A membrane keyboard with RGB lighting, ideal for gamers on a budget.</p>
+                <button onclick="openPurchaseForm('Razer Cynosa V2')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://my.priceshop.com/imgps/op/b0d72dc2777c45aeb3b99cd57cec24c6?preset=my-prod-m" alt="HyperX Alloy Origins">
+                <h3>HyperX Alloy Origins</h3>
+                <p>Price: RM 130</p>
+                <p>Description: A durable keyboard with a compact design, perfect for gaming and typing.</p>
+                <button onclick="openPurchaseForm('HyperX Alloy Origins')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://i.ebayimg.com/images/g/FeMAAOSw5-pk-IqY/s-l1200.jpg" alt="Razer BlackWidow Lite">
+                <h3>Razer BlackWidow Lite</h3>
+                <p>Price: RM 140</p>
+                <p>Description: A quiet mechanical keyboard designed for work and play.</p>
+                <button onclick="openPurchaseForm('Razer BlackWidow Lite')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://m.media-amazon.com/images/I/41qavniy3CL._AC_SY350_QL15_.jpg" alt="Logitech K840">
+                <h3>Logitech K840</h3>
+                <p>Price: RM 100</p>
+                <p>Description: A reliable keyboard for everyday use with a comfortable design.</p>
+                <button onclick="openPurchaseForm('Logitech K840')">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="https://down-my.img.susercontent.com/file/1ebf974cef27dcf75d412657f7497a59" alt="Zowie Celeritas II">
+                <h3>Zowie Celeritas II</h3>
+                <p>Price: RM 130</p>
+                <p>Description: An ergonomic keyboard focused on comfort and performance.</p>
+                <button onclick="openPurchaseForm('Zowie Celeritas II')">Buy</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="purchase-form" style="display: none;">
+        <h2>Purchase Form</h2>
+        <form>
+            <label for="product-name">Product:</label>
+            <input type="text" id="product-name" readonly>
+
+            <label for="customer-name">Name:</label>
+            <input type="text" id="customer-name" required>
+
+            <label for="customer-address">Address:</label>
+            <input type="text" id="customer-address" required>
+
+            <label for="customer-email">Email:</label>
+            <input type="email" id="customer-email" required>
+
+            <button type="submit">Submit</button>
+            <button type="button" onclick="closePurchaseForm()">Cancel</button>
+        </form>
+    </div>
+</section>
+
+<!-- About Us Section -->
+<section id="about" class="section" style="display: none;">
+    <h1>About Us</h1>
+    <p> Welcome to Malou Keyboard World your go-to destination for top-quality keyboards designed to elevate your typing and gaming experience. Our journey began with a simple idea: to create a store that understands the diverse needs of keyboard enthusiasts, from casual users to professional gamers and typists. At Keyboard World, we believe that the right keyboard can enhance productivity, comfort, and overall user experience, whether you're working in the office, gaming at home, or creating digital content.</p>
+    <p>Our Mission is to provide high-performance keyboards that combine innovative technology with modern design. We understand that every individual has unique preferences, which is why we offer a wide selection of mechanical, wireless, and ergonomic keyboards. Whether you're looking for tactile feedback, silent operation, or RGB lighting for a personalized look, we have something for everyone. Our keyboards are sourced from trusted manufacturers known for their reliability and durability, ensuring you get the best value for your investment.</p>
+    <p>At Malou Keyboard World, customer satisfaction is at the heart of everything we do. We are committed to helping our customers find the perfect keyboard that suits their needs. Our knowledgeable and friendly staff is always ready to assist, whether you're looking for technical advice, troubleshooting tips, or product recommendations. We take pride in our customer service and believe that building strong relationships with our customers is essential to our success.</p>
+    <P>Why Choose Us? What sets Malou Keyboard World apart is our dedication to quality and variety. We understand that keyboards are more than just tools—they are an extension of your personality and style. Our mechanical keyboards come in a variety of switch types, from the clicky satisfaction of Blue switches to the smooth, silent feel of Red switches. For those who value portability, our wireless keyboard collection offers the freedom to type from anywhere without the hassle of tangled cords. And for those who spend long hours at their desks, our ergonomic keyboards are designed to reduce strain and provide lasting comfort.</P>
+    <p>We also offer a customization service that allows you to design your own keyboard setup. From choosing keycap designs to setting up custom RGB lighting effects, we empower you to create a keyboard that’s truly yours. With the rise of the mechanical keyboard community, we’re proud to support enthusiasts who want to build and modify their keyboards to reflect their personality and needs.</p>
+    <p>As technology evolves, we stay ahead of the curve by continuously updating our inventory with the latest products on the market. From cutting-edge gaming keyboards with ultra-fast response times to sleek wireless models for the modern workspace, we strive to offer the best products available. We also keep an eye on trends in the industry, ensuring that you’ll always have access to the newest innovations in keyboard technology.</p>
+    <p>Our Vision is to be more than just a keyboard store. We want to create a community where people who share a passion for quality typing and gaming peripherals can connect, learn, and grow together. By fostering a space where customers can share their experiences, reviews, and ideas, we hope to create a dynamic environment that inspires and educates.</p>
+    <p>We’re proud of the trust our customers have placed in us over the years, and we will continue to work hard to maintain that trust. Whether you're a seasoned professional looking for a high-end keyboard or someone just starting out, we are here to help you make the best choice. At Keyboard World, your typing experience is our priority.</p>
+    <p>Thank you for choosing Malou Keyboard World, where performance meets passion!</p>
+</section>
+
+<!-- Contact Us Section -->
+<section id="contact" class="section" style="display: none;">
+    <h1>Contact Us</h1>
+    <h2>Our Email: tyyminsuper@gmail.com</h2>
+    <p>Just Contact Us for fun!</p>
+    <button onclick="openContactForm()">Contact Us</button>
+
+    <!-- Contact Form (initially hidden) -->
+    <div id="contact-form" style="display: none;">
+        <form>
+            <label for="contact-email">Email:</label>
+            <input type="email" id="contact-email" required>
+
+            <label for="contact-reason">Reason for Contact:</label>
+            <textarea id="contact-reason" required></textarea>
+
+            <button type="submit">Submit</button>
+            <button type="button" onclick="closeContactForm()">Cancel</button>
+        </form>
+    </div>
+</section>
+
+<script>
+    // JavaScript for switching between sections
+    function showSection(sectionId) {
+        let sections = document.getElementsByClassName('section');
+        for (let i = 0; i < sections.length; i++) {
+            sections[i].style.display = 'none';
+        }
+        document.getElementById(sectionId).style.display = 'block';
+    }
+
+    // JavaScript for opening and closing purchase form
+    function openPurchaseForm(productName) {
+        document.getElementById("purchase-form").style.display = 'block';
+        document.getElementById("product-name").value = productName;
+    }
+
+    function closePurchaseForm() {
+        document.getElementById("purchase-form").style.display = 'none';
+    }
+
+    // JavaScript for search functionality
+    function searchProducts() {
+        let input = document.getElementById('search-bar').value.toLowerCase();
+        let items = document.getElementsByClassName('product-item');
+
+        for (let i = 0; i < items.length; i++) {
+            let productName = items[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
+            if (productName.includes(input)) {
+                items[i].style.display = '';
+            } else {
+                items[i].style.display = 'none';
+            }
+        }
+    }
+
+    // JavaScript for contact form
+    function openContactForm() {
+        document.getElementById("contact-form").style.display = 'block';
+    }
+
+    function closeContactForm() {
+        document.getElementById("contact-form").style.display = 'none';
+    }
+</script>
+</body>
+</html>
